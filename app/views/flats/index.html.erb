@@ -1,0 +1,39 @@
+<div class="container mt-3">
+  <div class="row">
+    <div class="col-12">
+      <h1>All Flats</h1>
+    </div>
+    <div class="row">
+      <div class="col">
+        <p>All <%= @flats.count %> flats.</p>
+      </div>
+    </div>
+    <div class="row">
+      <% @flats.each do |flat| %>
+        <div class="col-md-4">
+          <div class="flat-card">
+            <div class="flat-card-image" style="background-image: url('https://via.placeholder.com/300')"></div>
+            <div class="flat-card-content">
+              <div class="flat-card-title">
+                <h4><%= flat.name %></h4>
+              </div>
+              <p><%= flat.address %></p>
+              <div class="flex">
+                <i class="material-icons me-2">people</i>
+                <span><%= flat.number_of_guests %></span>
+              </div>
+              <div class="flex ms-3">
+                <i class="material-icons me-2">euro-symbol</i>
+                <span><%= flat.price_per_night %></span>
+              </div>
+            </div>
+            <div class="flat-card-actions">
+              <%# TO DO %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+</div>
